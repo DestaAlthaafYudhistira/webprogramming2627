@@ -16,4 +16,11 @@ function App() {
   );
 }
 
+/// ini adalah komentar
+
+/* 
+ssss
+ssss
+*/ 
+
 export default App;
