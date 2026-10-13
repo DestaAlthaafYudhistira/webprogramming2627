@@ -1,6 +1,7 @@
 name: UTS Web Programming
 
 on:
+  pull_request:
   push:
     branches: [ "uts-131026" ]
 
