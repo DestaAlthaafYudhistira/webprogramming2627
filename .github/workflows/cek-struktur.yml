@@ -79,7 +79,7 @@ jobs:
           cek_teks "src/components/layout/Footer.jsx" "export default function Footer"
 
           # Memastikan perintah 'return' tidak dihapus di salah satu file utama
-          cek_teks src/pages/Beranda.jsx" "return"
+          "cek_teks src/pages/Beranda.jsx" "return"
 
           if [ $ERROR -eq 1 ]; then
             echo ""
