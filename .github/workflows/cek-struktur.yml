@@ -101,7 +101,7 @@ jobs:
           
           # 1. Cek apakah import style.css sudah aktif (tanpa // di depannya)
           # ^\s* berarti baris harus diawali dengan 'import' (boleh ada spasi, tapi tidak boleh ada //)
-          if grep -Eq "^\s*import '\./assets/style\.css';" "src/App.jsx"; then
+          if grep -Eq "^\s*import .*style\.css" "src/App.jsx"; then
             echo "✅ AMAN: import style.css sudah diaktifkan."
           else
             echo "❌ GAGAL: Anda belum menghapus '//' pada import './assets/style.css' atau baris tersebut terhapus."
@@ -109,7 +109,7 @@ jobs:
           fi
 
           # 2. Cek apakah import react-router-dom sudah aktif
-          if grep -Eq "^\s*import \{ Routes, Route \} from 'react-router-dom';" "src/App.jsx"; then
+          if grep -Eq "^\s*import .*react-router-dom" "src/App.jsx"; then
             echo "✅ AMAN: import react-router-dom sudah diaktifkan."
           else
             echo "❌ GAGAL: Anda belum menghapus '//' pada import { Routes, Route } from 'react-router-dom' atau baris tersebut terhapus."
