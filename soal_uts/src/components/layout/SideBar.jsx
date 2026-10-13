@@ -1,4 +1,4 @@
-function SideBar(){
+export default function SideBar(){
     return (
         <aside className="sidebar-area">
             <h3>Berita Terbaru</h3>
@@ -19,7 +19,6 @@ function SideBar(){
     );
 }
 
-export default SideBar;
 // TODO 11
 // 1. Buat component function dengan nama SideBar
 // 2. Struktur wajib di dalam return:
