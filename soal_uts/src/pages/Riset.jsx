@@ -15,6 +15,8 @@ function Riset(){
   );
 }
 
+export default Riset;
+
 // TODO 16
 // Buat component  function dengan nama Riset
 /*

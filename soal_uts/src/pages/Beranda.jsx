@@ -15,6 +15,7 @@ function Beranda(){
     );
 }
 
+export default Beranda;
 
 
 // TODO 12
