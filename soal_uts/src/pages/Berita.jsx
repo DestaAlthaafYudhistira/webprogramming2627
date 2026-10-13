@@ -8,7 +8,7 @@ export default function Berita() {
         teknologi.
       </p>
       <p>
-        Ikuti terus perkembangan berita agar tidak ketinggalan informasi terkait 
+        Ikuti terus perkembangan berita agar tidak ketinggalan informasi  
         penerimaan mahasiswa baru, beasiswa, dan kegiatan akademik lainnya.
       </p>
     </div>
