@@ -14,7 +14,7 @@ export default function Header() {
     >
       <div className="header-text">
         <h1>ProdiInformatika</h1>
-        <p>Universitas Matana</p>
+        <p>Universitas Matana.</p>
       </div>
 
       <nav className="nav-menu">
