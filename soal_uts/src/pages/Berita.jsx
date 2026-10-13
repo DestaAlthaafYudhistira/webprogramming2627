@@ -8,7 +8,7 @@ function Berita() {
         teknologi.
       </p>
       <p>
-        Ikuti terus perkembangan berita agar tidak ketinggalan informasi
+        Ikuti terus perkembangan berita agar tidak ketinggalan informasi terkait 
         penerimaan mahasiswa baru, beasiswa, dan kegiatan akademik lainnya.
       </p>
     </div>
