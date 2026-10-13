@@ -30,7 +30,7 @@ function App() {
         </main>
          <SideBar />
       </div>
-      {/* TODO 5 Footer */}
+      <Footer />
       
     </div>
   );
