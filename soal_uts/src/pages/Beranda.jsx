@@ -7,10 +7,7 @@ export default function Beranda(){
                 program studi di bidang <strong>Ilmu Komputer</strong> yang menjadi
                 pilihan tepat di <em>Era Digital Sekarang</em>.
             </p>
-            <p>
-                Teknik Informatika Merupakan Salah Satu Jurusan Pendidikan Tingkat 
-                Perguruan Tinggi Yang Mempelajari Serta Menerapkan Prinsip-Prinsip Ilmu Komputer.
-            </p>
+            <p>Teknik Informatika Merupakan Salah Satu Jurusan Pendidikan Tingkat Perguruan Tinggi Yang Mempelajari Serta Menerapkan Prinsip-Prinsip Ilmu Komputer.</p>
         </div>
     );
 }
