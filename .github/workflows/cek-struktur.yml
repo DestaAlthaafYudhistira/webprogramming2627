@@ -3,6 +3,8 @@ name: UTS Web Programming
 on:
   push:
     branches: [ "uts-131026" ]
+  pull_request:
+    branches: [ "uts-131026" ]
 
 jobs:
   verifikasi-kode:
