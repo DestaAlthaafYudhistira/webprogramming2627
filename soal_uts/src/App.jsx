@@ -14,6 +14,7 @@ import Pendidikan from './pages/Pendidikan';
 import Profil from './pages/Profil';
 import Riset from './pages/Riset';
 import NotFound from './pages/NotFound';
+import Array from './pages/Array';
 
 // lakukan commit "selesai TODO 2" dan push 
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/profil" element={<Profil />} />
             <Route path="/riset" element={<Riset />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/array" element={<Array />} />
           </Routes>
         </main>
          <SideBar />
