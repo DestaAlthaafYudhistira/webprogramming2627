@@ -820,6 +820,14 @@ jobs:
             ERROR=1
           fi
 
+          if git log --oneline | grep -iq "todo 18"; then
+          echo "✅ AMAN: Mahasiswa telah melakukan commit khusus untuk TODO 18."
+          else
+            echo "❌ GAGAL: Anda belum melakukan commit untuk TODO 16!"
+            echo "Pastikan Anda menjalankan perintah: git commit -m 'selesai TODO 18'"
+            ERROR=1
+          fi
+
           if [ $ERROR -eq 1 ]; then
             echo "=========================================================="
             echo "Status: UJIAN GAGAL. Perbaiki komponen Array sesuai instruksi!"
