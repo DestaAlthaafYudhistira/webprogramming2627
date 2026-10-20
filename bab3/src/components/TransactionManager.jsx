@@ -72,5 +72,4 @@ function TransactionManager() {
     </div>
   );
 }
-
 export default TransactionManager;
