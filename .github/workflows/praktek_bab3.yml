@@ -1,0 +1,278 @@
+name: Praktek Bab 3
+
+on:
+  push:
+    branches: [ "Desain_UI_API" ]
+  pull_request:
+    branches: [ "Desain_UI_API" ]
+
+jobs:
+  verifikasi-kode:
+    name: Cek Validasi Kegiatan
+    runs-on: ubuntu-latest
+
+    # Menyetel default folder ke 'soal_uts'
+    defaults:
+      run:
+        working-directory: ./bab3
+
+    steps:
+      - name: Mengambil kode mahasiswa (beserta seluruh riwayat commit)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      # ---------------------------------------------------------
+      # STEP 1: Instalasi
+      # ---------------------------------------------------------
+      - name: 1.  Lakukan instal npm
+        run: |
+          echo "Lakukan instal...."
+          npm install
+      
+      # ---------------------------------------------------------
+      # STEP 2: Cek Keberadaan File Inti
+      # ---------------------------------------------------------
+      - name: 2. Validasi Nama dan Posisi File
+        run: |
+          echo "Mengecek apakah ada file yang hilang atau dipindah..."
+          FILES=(
+          "src/components/TransaksiItem.jsx" 
+          "src/components/KartuRingkasan.jsx" 
+          "src/styles/transaksi.css" 
+          "src/components/Badge.jsx"
+          "src/components/WalletSummary.jsx"
+          "src/components/LayoutGrid.jsx"
+          "src/components/HeaderBanner.jsx"
+          "src/components/CardStatusDemo.jsx"
+          "src/components/AppNavigation.jsx"
+          "src/components/TransactionManager.jsx"
+          "src/main.jsx"
+          "src/App.css"
+          "src/App.jsx"
+          "src/index.css"
+          "src/assets/style.css" 
+          "package.json")
+          MISSING=0
+          for FILE in "${FILES[@]}"; do
+            if [ ! -f "$FILE" ]; then
+              echo "❌ HILANG: $FILE"
+              MISSING=1
+            fi
+          done
+          if [ $MISSING -eq 1 ]; then exit 1; fi
+
+      # ---------------------------------------------------------
+      # STEP 3: Inline CSS
+      # ---------------------------------------------------------
+      - name: 3. Inline CSS
+        run: |
+          
+          ERROR=0
+
+          # Fungsi pembantu untuk memindai teks
+          cek_teks() {
+            local file=$1
+            local teks_wajib=$2
+            # grep akan mencari teks di dalam file. Jika tidak ketemu, maka ERROR
+            if ! grep -q "$teks_wajib" "$file"; then
+              echo "❌ PELANGGARAN di $file: Anda menghapus atau mengubah deklarasi '$teks_wajib'"
+              ERROR=1
+            fi
+          }
+          # FILE 
+          FILE = "src/component/TransaksiItem.jsx"
+          # Mendaftarkan teks yang TIDAK BOLEH dihapus oleh mahasiswa
+          cek_teks "$FILE" "export default function TransaksiItem()"
+          cek_teks "$FILE" "return"
+          cek_teks "$FILE" "<div style={{ backgroundColor: '#f8f9fa', padding: '15px', borderRadius: '8px' }}>"
+          cek_teks "$FILE" "<h4 style={{ color: '#28a745', fontSize: '18px' }}>Pemasukan: Rp 500.000</h4>"
+          
+          # Cara menggunakannya 
+         
+
+          if [ $ERROR -eq 1 ]; then
+            echo ""
+            echo "Status: Struktur tidak boleh dimodifikasi!"
+            exit 1
+          else
+            echo ""
+            echo "✅ AMAN: Struktur deklarasi sudah sesuai"
+            exit 0
+          fi
+      
+      # ---------------------------------------------------------
+      # STEP 4: Internal CSS (Variable Object)
+      # ---------------------------------------------------------
+      - name: 3.Internal CSS (Variable Object)
+        run: |
+         
+          ERROR=0
+
+          # Fungsi pembantu untuk memindai teks
+          cek_teks() {
+            local file=$1
+            local teks_wajib=$2
+            # grep akan mencari teks di dalam file. Jika tidak ketemu, maka ERROR
+            if ! grep -q "$teks_wajib" "$file"; then
+              echo "❌ PELANGGARAN di $file: Anda menghapus atau mengubah deklarasi '$teks_wajib'"
+              ERROR=1
+            fi
+          }
+          # FILE 
+          FILE= "src/component/KartuRingkasan.jsx"
+          # Mendaftarkan teks yang TIDAK BOLEH dihapus oleh mahasiswa
+          cek_teks "$FILE" "export default function KartuRingkasan()"
+          cek_teks "$FILE" "const cardStyle = {"
+          cek_teks "$FILE" "padding: '20px'"
+          cek_teks "$FILE" "border: '1px solid #dee2e6'"
+          cek_teks "$FILE" "borderRadius: '6px'"
+          cek_teks "$FILE" "marginBottom: '15px'"
+          cek_teks "$FILE" "const textStyle = {"
+          cek_teks "$FILE" "fontWeight: 'bold'"
+          cek_teks "$FILE" "color: '#0d6efd'"
+          cek_teks "$FILE" "return ("
+          cek_teks "$FILE" "<div style={cardStyle}>"
+          cek_teks "$FILE" "<p style={textStyle}>Total Saldo: Rp 2.500.000</p>"
+          cek_teks "$FILE" ""
+          cek_teks "$FILE" ""
+          cek_teks "$FILE" ""
+          cek_teks "$FILE" ""
+          cek_teks "$FILE" ""
+
+          # Cara menggunakannya 
+        
+
+          if [ $ERROR -eq 1 ]; then
+            echo ""
+            echo "Status: Struktur tidak boleh dimodifikasi!"
+            exit 1
+          else
+            echo ""
+            echo "✅ AMAN: Struktur deklarasi sudah sesuai"
+            exit 0
+          fi
+      
+      # ---------------------------------------------------------
+      # STEP 5: Eksternal CSS & className
+      # ---------------------------------------------------------
+      - name: 4. Eksternal CSS & className
+        run: |
+          
+          ERROR=0
+
+          # Fungsi pembantu untuk memindai teks
+          cek_teks() {
+            local file=$1
+            local teks_wajib=$2
+            # grep akan mencari teks di dalam file. Jika tidak ketemu, maka ERROR
+            if ! grep -q "$teks_wajib" "$file"; then
+              echo "❌ PELANGGARAN di $file: Anda menghapus atau mengubah deklarasi '$teks_wajib'"
+              ERROR=1
+            fi
+          }
+          # FILE 
+          FILE_B = "src/component/Badge.jsx"
+          FILE_A = "src/styles/transaksi.css"
+
+          # Mendaftarkan teks yang TIDAK BOLEH dihapus oleh mahasiswa
+
+          # FILE A
+          cek_teks "$FILE_A" ".badge-pemasukan {"
+          cek_teks "$FILE_A" "background-color: #d4edda;"
+          cek_teks "$FILE_A" "color: #155724;"
+          cek_teks "$FILE_A" "padding: 6px 12px;"
+          cek_teks "$FILE_A" "border-radius: 4px;"
+          cek_teks "$FILE_A" ".badge-pengeluaran {"
+          cek_teks "$FILE_A" "background-color: #f8d7da;"
+          cek_teks "$FILE_A" "color: #721c24;"
+          cek_teks "$FILE_A" "padding: 6px 12px;"
+          cek_teks "$FILE_A" "border-radius: 4px;"
+          # FILE B
+          cek_teks "$FILE_B" "import '../styles/transaksi.css';"
+          cek_teks "$FILE_B" "export default function Badge({ tipe, children }) {"
+          cek_teks "$FILE_B" "const className = tipe === 'Pemasukan' ? 'badge-pemasukan' : 'badge-pengeluaran';"
+          cek_teks "$FILE_B" "return <span className={className}>{children}</span>;"
+
+          # Cara menggunakannya 
+
+         
+
+          if [ $ERROR -eq 1 ]; then
+            echo ""
+            echo "Status: Struktur tidak boleh dimodifikasi!"
+            exit 1
+          else
+            echo ""
+            echo "✅ AMAN: Struktur deklarasi sudah sesuai"
+            exit 0
+          fi
+      
+      # ---------------------------------------------------------
+      # STEP 5: Instalasi React Bootstrap & Bootstrap
+      # ---------------------------------------------------------
+      - name: 5.  Instalasi React Bootstrap & Bootstrap
+        run: |
+          echo "Lakukan instal...."
+          
+          npm install react-bootstrap bootstrap --legacy-peer-deps
+
+          npm install react-router-dom
+
+          echo "Cek Boostrap !"
+
+          ERROR=0
+        
+          # Fungsi pembantu untuk memindai teks
+          cek_teks() {
+            local file=$1
+            local teks_wajib=$2
+            # grep akan mencari teks di dalam file. Jika tidak ketemu, maka ERROR
+            if ! grep -q "$teks_wajib" "$file"; then
+              echo "❌ PELANGGARAN di $file: Anda menghapus atau mengubah deklarasi '$teks_wajib'"
+              ERROR=1
+            fi
+          }
+          # FILE 
+          FILE_A = "src/main.jsx"
+
+          # Mendaftarkan teks yang TIDAK BOLEH dihapus oleh mahasiswa
+
+          # FILE A
+          cek_teks "$FILE_A" "import { StrictMode } from 'react'"
+          cek_teks "$FILE_A" "import { createRoot } from 'react-dom/client'"
+          cek_teks "$FILE_A" "import { BrowserRouter } from 'react-router-dom'"
+          cek_teks "$FILE_A" "import './index.css'"
+          cek_teks "$FILE_A" "import App from './App.jsx'"
+          cek_teks "$FILE_A" "createRoot(document.getElementById('root')).render("
+          cek_teks "$FILE_A" "<StrictMode>"
+          cek_teks "$FILE_A" "<BrowserRouter>"
+          cek_teks "$FILE_A" "<App />"
+
+          # FILE B
+          FILE_B = "src/App.jsx"
+          cek_teks "$FILE_B" "import './App.css'"
+          cek_teks "$FILE_B" "import { Route, Routes } from 'react-router-dom'"
+          cek_teks "$FILE_B" "import TransaksiItem from './component/TransaksiItem'"
+          cek_teks "$FILE_B" "import KartuRingkasan from './component/KartuRingkasan'"
+          cek_teks "$FILE_B" "import Badge from './component/Badge'"
+          cek_teks "$FILE_B" "import WalletSummary from './component/WalletSummary'"
+          cek_teks "$FILE_B" "<Routes>"
+          cek_teks "$FILE_B" "<Route path='/transaksi' element={ <TransaksiItem />} />"
+          cek_teks "$FILE_B" "<Route path='/kartu' element={ <KartuRingkasan />} />"
+          cek_teks "$FILE_B" "<Route path='/badge' element={ <Badge />} />"
+          cek_teks "$FILE_B" "<Route path='/wallet' element={ <WalletSummary />} />"
+          
+          if [ $ERROR -eq 1 ]; then
+            echo ""
+            echo "Status: Struktur tidak boleh dimodifikasi!"
+            exit 1
+          else
+            echo ""
+            echo "✅ AMAN: Struktur deklarasi sudah sesuai"
+            exit 0
+          fi
+
+      
+
+      
