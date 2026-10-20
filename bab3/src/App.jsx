@@ -1,9 +1,9 @@
 import './App.css'
 import {Navigate, Route, Routes} from 'react-router-dom'
-import TransaksiItem from './component/TransaksiItem'
-import KartuRingkasan from './component/KartuRingkasan'
-import Badge from './component/Badge'
-import WalletSummary from './component/WalletSummary'
+import TransaksiItem from './components/TransaksiItem'
+import KartuRingkasan from './components/KartuRingkasan'
+import Badge from './components/Badge'
+import WalletSummary from './components/WalletSummary'
 // import transaksi Item 
 // import kartu Ringkasan
 // import badge
