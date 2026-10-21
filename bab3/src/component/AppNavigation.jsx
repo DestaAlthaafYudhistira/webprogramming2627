@@ -27,4 +27,4 @@ function AppNavigation(){
     </Navbar>
   );
 }
-export default AppNavigation;
+export default  AppNavigation;
