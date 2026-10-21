@@ -1,32 +1,57 @@
-// src/component/AppNavigation.jsx
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Badge, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 function AppNavigation() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
       <Container>
-        {/* Brand/Logo terhubung ke halaman utama */}
         <Navbar.Brand as={NavLink} to="/">
-          CatatanKeuangan
+          Catatan Keuangan
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/">
-              Beranda
+              Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/transaksi">
-              Transaksi
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/laporan">
-              Laporan
-            </Nav.Link>
+
+            <NavDropdown
+              title={
+                <>
+                  Menu <Badge bg="success">7</Badge>
+                </>
+              }
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item as={NavLink} to="/CardStatusDemo">
+                CardStatusDemo
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/HeaderBanner">
+                HeaderBanner
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/TransactionManager">
+                TransactionManager
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/KartuRingkasan">
+                KartuRingkasan
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/LayoutGrid">
+                LayoutGrid
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/WalletSummary">
+                WalletSummary
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/AppNavigation">
+                AppNavigation
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
 export default AppNavigation;

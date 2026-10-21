@@ -4,6 +4,8 @@ import TransaksiItem from './component/TransaksiItem'
 import KartuRingkasan from './component/KartuRingkasan'
 import Badge from './component/Badge'
 import WalletSummary from './component/WalletSummary'
+import CardStatusDemo from './component/CardStatusDemo';
+import AppNavigation from './component/AppNavigation';
 // import transaksi Item 
 // import kartu Ringkasan
 // import badge
@@ -13,6 +15,7 @@ import WalletSummary from './component/WalletSummary'
 function App() {
   return (
     <>
+      <AppNavigation />
       <Routes>
         <Route path='/transaksi' element={ <TransaksiItem />} />
         <Route path='/kartu' element={ <KartuRingkasan />} />
@@ -21,6 +24,7 @@ function App() {
         <Route path='/LayoutGrid' element={ <LayoutGrid/>  } />
         <Route path='/HeaderBanner' element={ <HeaderBanner/>  } />
         <Route path='/CardStatusDemo' element={ <CardStatusDemo/> } />
+        <Route path='/AppNavigation' element={ <AppNavigation/> } />
       </Routes>
     </>
   )
