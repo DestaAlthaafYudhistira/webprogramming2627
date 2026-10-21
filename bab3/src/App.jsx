@@ -6,6 +6,7 @@ import Badge from './component/Badge'
 import WalletSummary from './component/WalletSummary'
 import CardStatusDemo from './component/CardStatusDemo'
 import AppNavigation from './component/AppNavigation'
+import TransactionManager from './component/TransactionManager'
 // import transaksi Item 
 // import kartu Ringkasan
 // import badge
@@ -25,6 +26,7 @@ function App() {
         <Route path='/HeaderBanner' element={ <HeaderBanner/>  } />
         <Route path='/CardStatusDemo' element={ <CardStatusDemo/> } />
         <Route path='/AppNavigation' element={ <AppNavigation/> } />
+        <Route path='/TransactionManager' element={ <TransactionManager/> } />
       </Routes>
     </>
   )
