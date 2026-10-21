@@ -1,7 +1,7 @@
 // src/component/AppNavigation.jsx
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import { NavLink } from 'react-router-dom';
-function AppNavigation() {
+function AppNavigation(){
   return (
     <Navbar bg='dark' variant='dark' expand='lg' className='mb-4'>
       <Container>
@@ -14,7 +14,7 @@ function AppNavigation() {
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item as={NavLink} to='/badge'>Badge</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/cardstatusdemo' >CardStatusDemo</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/headerbanner'>Header Banner</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/headerbanner'>HeaderBanner</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/transactionmanager'>TransactionManager</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={NavLink} to='/karturingkasan'>KartuRingkasan</NavDropdown.Item>
