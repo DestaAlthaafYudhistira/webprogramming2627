@@ -1,13 +1,11 @@
-import { Badge, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 function AppNavigation() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
+    <Navbar bg='dark' variant='dark' expand='lg' className='mb-4'>
       <Container>
-        <Navbar.Brand as={NavLink} to="/">
-          Catatan Keuangan
-        </Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/">Catatan Keuangan</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

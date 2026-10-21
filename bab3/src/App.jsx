@@ -4,8 +4,8 @@ import TransaksiItem from './component/TransaksiItem'
 import KartuRingkasan from './component/KartuRingkasan'
 import Badge from './component/Badge'
 import WalletSummary from './component/WalletSummary'
-import CardStatusDemo from './component/CardStatusDemo';
-import AppNavigation from './component/AppNavigation';
+import CardStatusDemo from './component/CardStatusDemo'
+import AppNavigation from './component/AppNavigation'
 // import transaksi Item 
 // import kartu Ringkasan
 // import badge
