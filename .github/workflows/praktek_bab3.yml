@@ -15,6 +15,7 @@ jobs:
     defaults:
       run:
         working-directory: ./bab3
+        
 
     steps:
       - name: Mengambil kode mahasiswa (beserta seluruh riwayat commit)
@@ -347,9 +348,9 @@ jobs:
           fi
       
       # ---------------------------------------------------------
-      # STEP 8: Instalasi React Bootstrap & Bootstrap
+      # STEP 8: 
       # ---------------------------------------------------------
-      - name: 8.  Jumbotron pada Bootstrap Modern
+      - name: 8.  CardStatusDemo
         run: |
           ERROR=0
           # Fungsi pembantu untuk memindai teks
