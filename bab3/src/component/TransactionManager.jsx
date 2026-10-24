@@ -2,7 +2,7 @@ import {useState} from 'react';
 import { useState, useEffect } from 'react';
 import {Form, InputGroup, Modal, Button, Table, ProgressBar}from 'react-bootstrap';
 // const s = useState(false)
-// const s = useState([])
+// const t = useState([])
 function TransactionManager() {
   const [show, setShow] = useState(false)
   const [transaksi, setTransaksi] = useState([])
