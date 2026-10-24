@@ -38,7 +38,7 @@ export default function KartuRingkasan() {
   
   return (
     <div style={cardStyle}>
-      <ProgressBar now={75} label="75%" variant="warning" className="mb-4" />
+      <p style={textStyle}>Total Saldo: Rp 2.500.000</p>
       <Table striped bordered hover responsive>
         <thead>
           <tr>
