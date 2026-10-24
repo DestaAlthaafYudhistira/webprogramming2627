@@ -4,7 +4,7 @@ import {Form, InputGroup, Modal, Button, Table, ProgressBar}from 'react-bootstra
 // const s = useState(false)
 function TransactionManager() {
   const [show, setShow] = useState(false)
-  const [transaksi, setTransaksi] = useState([])
+  const [transaksi, setTransaksi] = useState([]);
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
