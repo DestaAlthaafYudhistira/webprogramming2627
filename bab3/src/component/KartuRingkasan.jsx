@@ -17,6 +17,5 @@ export default function KartuRingkasan() {
     </div>
   );
 }
-
 // App.jsx
 // <KartuRingkasan />
