@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import {Form, InputGroup, Modal, Button, Table, ProgressBar} from 'react-bootstrap';
-
+import {Form, InputGroup, Modal, Button, Table, ProgressBar}from 'react-bootstrap';
+// const s = useState(false)
 function TransactionManager() {
   const [show, setShow] = useState(false)
   const [transaksi, setTransaksi] = useState([])
@@ -18,7 +18,6 @@ function TransactionManager() {
 
       <ProgressBar now={75} label="75%" variant="warning" className="mb-4" />
 
-      {/* Tabel Data Transaksi */}
       <Table striped bordered hover responsive>
         <thead>
           <tr>
@@ -38,7 +37,6 @@ function TransactionManager() {
         </tbody>
       </Table>
 
-      {/* Modal Form Tambah Transaksi */}
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Catat Transaksi Baru</Modal.Title>
@@ -49,7 +47,6 @@ function TransactionManager() {
               <Form.Label>Keterangan</Form.Label>
               <Form.Control type="text" placeholder="Misal: Bensin" />
             </Form.Group>
-
             <Form.Group className="mb-3">
               <Form.Label>Nominal</Form.Label>
               <InputGroup>
@@ -71,4 +68,5 @@ function TransactionManager() {
     </div>
   );
 }
+
 export default TransactionManager;
