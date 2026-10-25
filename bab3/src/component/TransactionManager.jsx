@@ -55,6 +55,7 @@ export default function TransactionManager() {
       <ProgressBar now={75} label="75%" variant="warning" className="mb-4" />
 
       <Table striped bordered hover responsive>
+        {/* <AppNavigation /> */}
         <thead>
           <tr>
             <th>#</th>
