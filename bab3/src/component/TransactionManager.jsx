@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import {Form, InputGroup, Modal, Button, Table, ProgressBar}from 'react-bootstrap';
 // const s = useState(false)
 // const t = useState([])
-function TransactionManager() {
-  const [show, setShow] = useState(false)
+export default function TransactionManager() {
+  const [show, setShow] = useState(false);
   const [transaksi, setTransaksi] = useState([])
   
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const ambilData = () => {
     fetch('http://localhost:3000/transaksi')
@@ -100,5 +100,3 @@ function TransactionManager() {
     </div>
   );
 }
-
-export default TransactionManager;
