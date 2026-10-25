@@ -10,6 +10,7 @@ export default function TransactionManager() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  {/*
   const ambilData = () => {
     fetch('http://localhost:3000/transaksi')
     .then ((response) => response.json())
@@ -21,6 +22,8 @@ export default function TransactionManager() {
       console.error('Terjadi Kesalahan saat mengambil data:', error);
     });
   };
+
+  */}
 
   const ambilDataAsync = async () =>{
     try {
@@ -38,7 +41,9 @@ export default function TransactionManager() {
   };
 
   useEffect(() => {
+    {/*
       ambilData();
+    */}
       ambilDataAsync();
     }, []
   )
