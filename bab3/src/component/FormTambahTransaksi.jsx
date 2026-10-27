@@ -1,4 +1,3 @@
-// src/component/FormTambahTransaksi.jsx
 import { useState } from 'react';
 import { Button, Alert, Spinner, Form } from 'react-bootstrap';
 

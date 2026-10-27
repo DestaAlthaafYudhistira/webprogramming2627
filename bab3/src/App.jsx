@@ -7,6 +7,8 @@ import WalletSummary from './component/WalletSummary'
 import CardStatusDemo from './component/CardStatusDemo'
 import AppNavigation from './component/AppNavigation'
 import TransactionManager from './component/TransactionManager'
+import LayoutGrid from './component/LayoutGrid'
+import HeaderBanner from './component/HeaderBanner'
 // import transaksi Item 
 // import kartu Ringkasan
 // import badge

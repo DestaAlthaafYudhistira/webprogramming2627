@@ -17,9 +17,9 @@ function AppNavigation(){
               <NavDropdown.Item as={NavLink} to='/headerbanner'>HeaderBanner</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/transactionmanager'>TransactionManager</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={NavLink} to='/karturingkasan'>KartuRingkasan</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/kartu'>KartuRingkasan</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/layoutgrid'>LayoutGrid</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/walletsummary'>WalletSummary</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/wallet'>WalletSummary</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
