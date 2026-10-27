@@ -9,6 +9,8 @@ import AppNavigation from './component/AppNavigation'
 import TransactionManager from './component/TransactionManager'
 import LayoutGrid from './component/LayoutGrid'
 import HeaderBanner from './component/HeaderBanner'
+import DaftarTugasFunction from './component/DaftarTugasFunction'
+import PostListAxios from './component/PostListAxios'
 // import transaksi Item 
 // import kartu Ringkasan
 // import badge
@@ -29,6 +31,8 @@ function App() {
         <Route path='/CardStatusDemo' element={ <CardStatusDemo/> } />
         <Route path='/AppNavigation' element={ <AppNavigation/> } />
         <Route path='/TransactionManager' element={ <TransactionManager/> } />
+        <Route path='/daftarTugas' element={ <DaftarTugasFunction/> } />
+        <Route path='/listAxios' element={ <PostListAxios/> } />
       </Routes>
     </>
   )
